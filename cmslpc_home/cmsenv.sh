@@ -1,10 +1,19 @@
 # Tai Sakuma <sakuma@fnal.gov>
 
+##________________________________________________________________  CRAB 2  __||
+# command="source /uscmst1/prod/grid/CRAB/crab.sh"
+# echo + $command >&2
+# $command
+
+##________________________________________________________________  CRAB 3  __||
+command="source /cvmfs/cms.cern.ch/crab3/crab_slc6.sh"
+echo + $command >&2
+$command
+
 ##____________________________________________________________________________||
 command="cd $*"
 echo + $command >&2
 $command
-
 
 ##____________________________________________________________  SCRAM_ARCH  __||
 dir=`/bin/pwd`
@@ -19,14 +28,4 @@ $command
 echo + eval \`scramv1 runtime -sh\` >&2
 eval `scramv1 runtime -sh`
  
-##________________________________________________________________  CRAB 2  __||
-# command="source /uscmst1/prod/grid/CRAB/crab.sh"
-# echo + $command >&2
-# $command
-
-##________________________________________________________________  CRAB 3  __||
-command="source /cvmfs/cms.cern.ch/crab3/crab.sh"
-echo + $command >&2
-$command
-
 ##____________________________________________________________________________||
