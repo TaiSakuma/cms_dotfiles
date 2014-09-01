@@ -19,8 +19,13 @@ $command
 echo + eval \`scramv1 runtime -sh\` >&2
 eval `scramv1 runtime -sh`
  
-##____________________________________________________________________________||
-command="source /afs/cern.ch/cms/ccs/wm/scripts/Crab/crab.sh"
+##________________________________________________________________  CRAB 2  __||
+# command="source /afs/cern.ch/cms/ccs/wm/scripts/Crab/crab.sh"
+# echo + $command >&2
+# $command
+
+##________________________________________________________________  CRAB 3  __||
+command="source /cvmfs/cms.cern.ch/crab3/crab.sh"
 echo + $command >&2
 $command
 
