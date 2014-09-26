@@ -56,8 +56,3 @@ export CLICOLOR=YES
 eval `dircolors ~/.dircolors`
 
 #_____________________________________________________________________________||
-if [ -z "${CMS_PATH:-}" ]; then
-    source /cvmfs/cms.cern.ch/cmsset_default.sh
-fi
-
-#_____________________________________________________________________________||
