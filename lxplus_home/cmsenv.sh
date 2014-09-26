@@ -1,10 +1,5 @@
 # Tai Sakuma <sakuma@fnal.gov>
 
-##________________________________________________________________  CRAB 2  __||
-# command="source /afs/cern.ch/cms/ccs/wm/scripts/Crab/crab.sh"
-# echo + $command >&2
-# $command
-
 ##________________________________________________________________  CRAB 3  __||
 command="source /cvmfs/cms.cern.ch/crab3/crab_slc6.sh"
 echo + $command >&2
