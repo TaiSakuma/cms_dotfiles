@@ -57,7 +57,7 @@ eval `dircolors ~/.dircolors`
 
 #_____________________________________________________________________________||
 if [ -z "${CMS_PATH:-}" ]; then
-    source /uscmst1/prod/sw/cms/shrc prod
+    source /cvmfs/cms.cern.ch/cmsset_default.sh
 fi
 
 #_____________________________________________________________________________||
