@@ -60,8 +60,4 @@ if [ -z "${CMS_PATH:-}" ]; then
     source /uscmst1/prod/sw/cms/shrc prod
 fi
 
-if [ -f "/uscmst1/prod/grid/gLite_SL5.sh" ]; then
-    source /uscmst1/prod/grid/gLite_SL5.sh
-fi
-
 #_____________________________________________________________________________||
