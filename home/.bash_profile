@@ -18,12 +18,12 @@ export HISTCONTROL=ignoreboth
 shopt -s histappend
 
 #_______________________________________________________________________ git _||
-if [ -f "~/.git_completion/git-completion.bash" ]; then
-    source ~/.git_completion/git-completion.bash
+if [ -f "$HOME/.git_completion/git-completion.bash" ]; then
+    source $HOME/.git_completion/git-completion.bash
 fi
 
-if [ -f "~/.git_completion/git-prompt.sh" ]; then
-    source ~/.git_completion/git-prompt.sh
+if [ -f "$HOME/.git_completion/git-prompt.sh" ]; then
+    source $HOME/.git_completion/git-prompt.sh
 fi
 
 #_____________________________________________________________________________||
