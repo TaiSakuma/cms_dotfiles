@@ -1,26 +1,39 @@
 # Tai Sakuma <sakuma@fnal.gov>
 
-##____________________________________________________________________________||
+##__________________________________________________________________||
 trunkdir=$*
+# e.g. ~/work/tdr2/papers/SUS-15-005/trunk/
+
 tdrdir=$trunkdir
-while [ ! -x ${tdrdir}/notes/tdr ] && [ "$tdrdir" != "/" ] ; do
+while [ ! -x ${tdrdir}/notes/tdr ] && [ ! -x ${tdrdir}/papers/tdr ] && [ "$tdrdir" != "/" ] ; do
     tdrdir=`dirname $tdrdir`
 done
-trunkdir=${trunkdir#${tdrdir}/}
 
-##____________________________________________________________________________||
+if [ "$tdrdir" = "/" ]; then
+   echo "not in tdr: ${trunkdir}"
+   return
+fi
+# e.g. tdrdir=~/work/tdr2
+
+trunkdir=${trunkdir#${tdrdir}/}
+# e.g. papers/SUS-15-005/trunk/
+
+tdrinit=${trunkdir%%/*}/tdr
+# e.g. papers/tdr
+
+##__________________________________________________________________||
 command="cd $tdrdir"
 echo + $command >&2
 $command
 
-##____________________________________________________________________________||
-command="eval `notes/tdr runtime -sh`"
+##__________________________________________________________________||
+command="eval `${tdrinit} runtime -sh`"
 echo + $command >&2
 $command
 
-##____________________________________________________________________________||
+##__________________________________________________________________||
 command="cd $trunkdir"
 echo + $command >&2
 $command
 
-##____________________________________________________________________________||
+##__________________________________________________________________||
