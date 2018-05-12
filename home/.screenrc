@@ -1,2 +1,2 @@
 hardstatus alwayslastline '%{= 9g}[ %{G}%H %{g}][%= %{= 9w}%?%-Lw%?%{=b 9R}(%{W}%n*%f %t%?(%u)%?%{=b 9R})%{= 9w}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %d %M %c ]%{W}'
-
+defscrollback 1000000
